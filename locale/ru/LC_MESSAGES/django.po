@@ -1,0 +1,88 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-12 15:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+#: templates/base.html:37
+msgid "Avaleht"
+msgstr "Главная"
+
+#: templates/base.html:38
+msgid "Kursused"
+msgstr "Курсы"
+
+#: templates/base.html:39
+msgid "Uudised"
+msgstr "Новости"
+
+#: templates/base.html:40
+msgid "Kontakt"
+msgstr "Контакты"
+
+#: templates/base.html:72
+msgid "Robootika õpe lastele"
+msgstr "Обучение робототехнике для детей"
+
+#: templates/home.html:6
+msgid "Õpi robootikat ja programmeerimist"
+msgstr "Изучай робототехнику и программирование"
+
+#: templates/home.html:10
+msgid "Praktilised robootika kursused lastele ja noortele."
+msgstr "Практические курсы робототехники для детей и подростков"
+
+#: templates/home.html:18
+msgid "Vaata kursuseid"
+msgstr "Посмотреть курсы"
+
+#: templates/home.html:25
+msgid "Registreeru"
+msgstr "Записаться"
+
+#: templates/home.html:36
+msgid "Praktiline õppimine"
+msgstr "Практическое обучение"
+
+#: templates/home.html:40
+msgid "Lapsed ehitavad päris roboteid."
+msgstr "Дети собирают настоящих роботов"
+
+#: templates/home.html:46
+msgid "Programmeerimine"
+msgstr "Программирование"
+
+#: templates/home.html:50
+msgid "Scratch, Python ja robootika."
+msgstr "Scratch, Python и робототехника"
+
+#: templates/home.html:56
+msgid "Insenerimõtlemine"
+msgstr "Инженерное мышление"
+
+#: templates/home.html:60
+msgid "Loovus, probleemilahendus ja meeskonnatöö."
+msgstr "Креативность, решение задач и работа в команде"
+
+#: templates/home.html:70
+msgid "Alusta robootika õppimist juba täna"
+msgstr "Начни изучать роботехнику уже сегодня"
+
+#: templates/home.html:74
+msgid "Registreeru kursusele"
+msgstr "Записаться на курс"

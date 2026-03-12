@@ -1,0 +1,23 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Virtualenvs
+.venv/
+env/
+venv/
+
+# Environment
+.env
+
+# Node / Tailwind
+node_modules/
+npm-debug.log*
+
+# Compiled translations
+*.mo
+
+# OS junk
+.DS_Store
+Thumbs.db
