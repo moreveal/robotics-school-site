@@ -36,7 +36,6 @@ A single-page website for a robotics school built with Django, featuring multili
     - i18n routes via `i18n_patterns`.
 - **`core/`** – application logic.
   - `views.py` – views, including `home`.
-  - `middleware.py` – `LanguageRedirectMiddleware` for language handling.
   - `context_processors.py` – `site_settings` to pass `SITE_NAME` and other settings into templates.
 - **`templates/`** – HTML templates.
   - `base.html` – base layout.

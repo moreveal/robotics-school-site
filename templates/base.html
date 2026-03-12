@@ -55,22 +55,42 @@
       <div
         class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
       >
-        <a href="/" class="font-bold text-lg"> {{ SITE_NAME }} </a>
+        <a href="{% url 'home' %}" class="font-bold text-lg"> {{ SITE_NAME }} </a>
 
         <nav class="hidden md:flex gap-6 text-sm">
-          <a href="/">{% trans "Avaleht" %}</a>
-          <a href="/courses">{% trans "Kursused" %}</a>
-          <a href="/news">{% trans "Uudised" %}</a>
+          <a href="{% url 'home' %}">{% trans "Avaleht" %}</a>
+          <a href="{% url 'courses_list' %}">{% trans "Kursused" %}</a>
+          <a href="{% url 'news_list' %}">{% trans "Uudised" %}</a>
           <a href="/contact">{% trans "Kontakt" %}</a>
         </nav>
 
         <div class="flex items-center gap-4">
           <!-- language -->
 
-          <div class="flex gap-2 text-sm">
-            <a href="/et{{ request.path|slice:'3:' }}">ET</a>
-            <a href="/ru{{ request.path|slice:'3:' }}">RU</a>
-          </div>
+          <form
+            action="{% url 'set_language' %}"
+            method="post"
+            class="flex gap-2 text-sm items-center"
+          >
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{{ request.path }}" />
+            <button
+              type="submit"
+              name="language"
+              value="et"
+              class="cursor-pointer {% if LANGUAGE_CODE == 'et' %}font-semibold underline{% endif %}"
+            >
+              ET
+            </button>
+            <button
+              type="submit"
+              name="language"
+              value="ru"
+              class="cursor-pointer {% if LANGUAGE_CODE == 'ru' %}font-semibold underline{% endif %}"
+            >
+              RU
+            </button>
+          </form>
 
           <!-- theme -->
 

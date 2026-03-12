@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-12 15:29+0000\n"
+"POT-Creation-Date: 2026-03-12 17:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,70 +19,381 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
-#: templates/base.html:37
+
+#: core/models.py:12 core/models.py:61
+msgid "title"
+msgstr "заголовок"
+
+#: core/models.py:14 core/models.py:63
+msgid "slug"
+msgstr ""
+
+#: core/models.py:17
+msgid "Used in the news URL. Generated from title."
+msgstr "Используется в URL новости. Генерируется из заголовка"
+
+#: core/models.py:20 core/models.py:69
+msgid "language"
+msgstr "язык"
+
+#: core/models.py:25
+msgid "Leave empty to show this post for all languages."
+msgstr "Оставьте пустым, чтобы показывать эту запись для всех языков."
+
+#: core/models.py:28 core/models.py:77
+msgid "short summary"
+msgstr "краткое описание"
+
+#: core/models.py:30
+#, fuzzy
+#| msgid "Short intro text shown in the courses list."
+msgid "Optional short text shown in the news list."
+msgstr "Краткое вступление, отображаемое в списке курсов."
+
+#: core/models.py:33 core/models.py:99
+msgid "content (HTML allowed)"
+msgstr "содержимое (HTML допускается)"
+
+#: core/models.py:34
+msgid "Main text of the news post. You can paste formatted text."
+msgstr "Основной текст новости. Можно вставлять форматированный текст."
+
+#: core/models.py:36
+msgid "published"
+msgstr "опубликовано"
+
+#: core/models.py:38
+msgid "show on home page"
+msgstr "показывать на главной странице"
+
+#: core/models.py:41
+msgid ""
+"If enabled, this post will be highlighted on the home page for its language."
+msgstr ""
+"Если включено, эта запись будет выделена на главной странице для "
+"соответствующего языка."
+
+#: core/models.py:44
+msgid "created at"
+msgstr "создан"
+
+#: core/models.py:46
+msgid "published at"
+msgstr "опубликован"
+
+#: core/models.py:53
+msgid "news post"
+msgstr "новость"
+
+#: core/models.py:54
+msgid "news posts"
+msgstr "новости"
+
+#: core/models.py:66
+msgid "Used in the course URL. Generated from title."
+msgstr "Используется в URL курса. Генерируется из заголовка"
+
+#: core/models.py:74
+msgid "Leave empty to show this course for all languages."
+msgstr "Оставьте пустым, чтобы показывать этот курс для всех языков."
+
+#: core/models.py:79
+msgid "Short intro text shown in the courses list."
+msgstr "Краткое вступление, отображаемое в списке курсов."
+
+#: core/models.py:82
+msgid "age range"
+msgstr "возраст"
+
+#: core/models.py:85
+msgid "Example: 6–8 aastat"
+msgstr ""
+
+#: core/models.py:88
+msgid "schedule"
+msgstr "расписание"
+
+#: core/models.py:91
+msgid "Example: kord nädalas 90 min"
+msgstr ""
+
+#: core/models.py:94
+msgid "locations"
+msgstr "локации"
+
+#: core/models.py:96
+msgid "Where the course takes place."
+msgstr ""
+
+#: core/models.py:100
+msgid "Full description of the course. You can paste formatted text."
+msgstr "Полное описание курса. Можно вставлять форматированный текст."
+
+#: core/models.py:103
+msgid "image URL"
+msgstr "URL изображения"
+
+#: core/models.py:105
+msgid "Optional image URL to show on the course page."
+msgstr ""
+
+#: core/models.py:107
+msgid "active"
+msgstr "активен"
+
+#: core/models.py:109
+msgid "order"
+msgstr "порядок"
+
+#: core/models.py:111
+msgid "Lower values appear first in the list."
+msgstr "Меньшие значения отображаются выше в списке."
+
+#: core/models.py:116
+msgid "course"
+msgstr "курс"
+
+#: core/models.py:117
+msgid "courses"
+msgstr "курсы"
+
+#: templates/base.html:61 templates/home.html:5
 msgid "Avaleht"
 msgstr "Главная"
 
-#: templates/base.html:38
+#: templates/base.html:62 templates/courses_list.html:5
+#: templates/courses_list.html:14
 msgid "Kursused"
 msgstr "Курсы"
 
-#: templates/base.html:39
+#: templates/base.html:63 templates/news_list.html:5
+#: templates/news_list.html:14
 msgid "Uudised"
 msgstr "Новости"
 
-#: templates/base.html:40
+#: templates/base.html:64
 msgid "Kontakt"
 msgstr "Контакты"
 
-#: templates/base.html:72
+#: templates/base.html:133
 msgid "Robootika õpe lastele"
 msgstr "Обучение робототехнике для детей"
 
-#: templates/home.html:6
-msgid "Õpi robootikat ja programmeerimist"
+#: templates/course_detail.html:15
+msgid "Tagasi kursuste juurde"
+msgstr "Назад к списку курсов"
+
+#: templates/course_detail.html:42
+msgid "Kursuse info"
+msgstr "Информация о курсе"
+
+#: templates/course_detail.html:49 templates/courses_list.html:53
+msgid "Vanus"
+msgstr "Возраст"
+
+#: templates/course_detail.html:58 templates/courses_list.html:61
+msgid "Toimumissagedus"
+msgstr "Частота проведения"
+
+#: templates/course_detail.html:67
+msgid "Asukohad"
+msgstr "Локации"
+
+#: templates/course_detail.html:79
+msgid "Soovid sellele kursusele registreeruda?"
+msgstr "Хотите записаться на этот курс?"
+
+#: templates/course_detail.html:82
+msgid "Vaata registreerimisinfot avalehel ja uudiste sektsioonis."
+msgstr ""
+"Посмотрите информацию о регистрации на главной странице и в разделе новостей."
+
+#: templates/courses_list.html:17
+msgid "Vali sobiv robootika- ja programmeerimiskursus."
+msgstr ""
+"Выберите подходящий курс по робототехнике и программированию."
+
+#: templates/courses_list.html:73
+msgid "Vaata kursust"
+msgstr "Смотреть курс"
+
+#: templates/courses_list.html:82
+msgid "Hetkel pole ühtegi kursust lisatud."
+msgstr "В данный момент ни один курс не добавлен."
+
+#: templates/home.html:14
+msgid "Õpi robootikat ja programmeerimist kooliõpilastele"
 msgstr "Изучай робототехнику и программирование"
 
-#: templates/home.html:10
-msgid "Praktilised robootika kursused lastele ja noortele."
-msgstr "Практические курсы робототехники для детей и подростков"
-
 #: templates/home.html:18
-msgid "Vaata kursuseid"
+msgid ""
+"Praktilised robootika ja programmeerimise tunnid 1.–12. klassi lastele "
+"Tallinnas."
+msgstr ""
+"Практические занятия по робототехнике и программированию для школьников 1–12 "
+"классов в Таллине."
+
+#: templates/home.html:24
+msgid "Oluline teade"
+msgstr "Важное сообщение"
+
+#: templates/home.html:41 templates/news_list.html:47
+msgid "Loe lähemalt"
+msgstr "Подробнее"
+
+#: templates/home.html:47
+msgid ""
+"Registreeru uue õppeaasta kursustele – vaata täpsemat infot uudiste alt."
+msgstr ""
+"Запишитесь на курсы нового учебного года — подробная информация в разделе "
+"новостей."
+
+#: templates/home.html:57
+msgid "Registreerimise info"
+msgstr "Информация о регистрации"
+
+#: templates/home.html:64
+msgid "Vaata viimaseid uudiseid"
 msgstr "Посмотреть курсы"
 
-#: templates/home.html:25
-msgid "Registreeru"
-msgstr "Записаться"
+#: templates/home.html:69
+msgid "Tundide ajakava avaldame kohe, kui koolide tunniplaanid on paigas."
+msgstr ""
+"Расписание занятий будет опубликовано сразу после утверждения школьных "
+"расписаний."
 
-#: templates/home.html:36
+#: templates/home.html:79
+msgid "Tunnid toimuvad"
+msgstr "Занятия проходят"
+
+#: templates/home.html:83
+msgid "Mustamäe, Tammsaare tee 89, 2. korrus – kõik huvilised"
+msgstr "Mustamäe, Tammsaare tee 89, 2 этаж – все желающие"
+
+#: templates/home.html:86
+msgid "TALLINNA ÕISMÄE VENE LÜTSEUM, Õismäe tee 28 – ainult kooli õpilastele"
+msgstr ""
+"TALLINNA ÕISMÄE VENE LÜTSEUM, Õismäe tee 28 – только для учеников школы"
+
+#: templates/home.html:89
+msgid "TALLINNA HUMANITAARGÜMNAASIUM, Koidu 97 – ainult kooli õpilastele"
+msgstr "TALLINNA HUMANITAARGÜMNAASIUM, Koidu 97 – только для учеников школы"
+
+#: templates/home.html:95
+msgid "Õppetöö korraldus"
+msgstr "Организация обучения"
+
+#: templates/home.html:99
+msgid "Tunde ei toimu koolivaheaegadel ja riigipühadel."
+msgstr "Занятия не проводятся во время каникул и государственных праздников."
+
+#: templates/home.html:102
+msgid "Arve esitatakse iga kuu alguses."
+msgstr "Счёт выставляется в начале каждого месяца."
+
+#: templates/home.html:112
+msgid "Soodustused pikema perioodi eest tasumisel"
+msgstr "Скидки при долгосрочной оплате"
+
+#: templates/home.html:115
+#, python-format
+msgid ""
+"Makstes kaks korda aastas (september–detsember ja jaanuar–mai) kehtib 5%% "
+"soodustus. Arve esitatakse septembris ja jaanuaris."
+msgstr ""
+"При оплате двумя частями в год (сентябрь–декабрь и январь–май) "
+"предоставляется скидка 5%%. Счёт выставляется в сентябре и январе."
+
+#: templates/home.html:118
+#, python-format
+msgid ""
+"Makstes kogu õppeaasta eest (september–mai) kehtib 10%% soodustus. Arve "
+"esitatakse septembris."
+msgstr ""
+"При оплате сразу за весь учебный год (сентябрь–май) предоставляется скидка "
+"10%%. Счёт выставляется в сентябре."
+
+#: templates/home.html:121
+msgid ""
+"\n"
+"          NB! Kui soovite tundidest loobuda, palume sellest kirjalikult "
+"teada anda\n"
+"          aadressil <a href=\"mailto:digirobo.info@gmail.com\" "
+"class=\"underline\">digirobo.info@gmail.com</a>\n"
+"          vähemalt 1 kuu ette. Vastasel juhul jääb kehtima kohustus esitatud "
+"arve tasuda.\n"
+"          "
+msgstr ""
+"\n"
+"          NB! В случае, если хотите отказаться от занятий, необходимо "
+"предупредить письменно\n"
+"          на адрес <a href=\"mailto:digirobo.info@gmail.com\" "
+"class=\"underline\">digirobo.info@gmail.com</a>\n"
+"          минимум за 1 месяц. В противном случае сохраняется обязанность "
+"оплатить выставленный счёт.\n"
+"          "
+
+#: templates/home.html:135
+msgid "Miks valida meie robootikakool?"
+msgstr "Почему стоит выбрать нашу школу робототехники?"
+
+#: templates/home.html:141
 msgid "Praktiline õppimine"
 msgstr "Практическое обучение"
 
-#: templates/home.html:40
-msgid "Lapsed ehitavad päris roboteid."
-msgstr "Дети собирают настоящих роботов"
+#: templates/home.html:144
+msgid ""
+"Lapsed ehitavad päris roboteid ja katsetavad neid turvalises keskkonnas."
+msgstr "Дети собирают настоящих роботов и тестируют их в безопасной среде."
 
-#: templates/home.html:46
+#: templates/home.html:149
 msgid "Programmeerimine"
 msgstr "Программирование"
 
-#: templates/home.html:50
-msgid "Scratch, Python ja robootika."
-msgstr "Scratch, Python и робототехника"
+#: templates/home.html:152
+msgid "Scratch, Python ja kaasaegsed robootikakomplektid (WeDo, SPIKE jt.)."
+msgstr ""
+"Scratch, Python и современные наборы робототехники (WeDo, SPIKE и др.)."
 
-#: templates/home.html:56
+#: templates/home.html:157
 msgid "Insenerimõtlemine"
 msgstr "Инженерное мышление"
 
-#: templates/home.html:60
-msgid "Loovus, probleemilahendus ja meeskonnatöö."
+#: templates/home.html:160
+msgid "Loovus, probleemilahendus, meeskonnatöö ja esinemisoskused."
 msgstr "Креативность, решение задач и работа в команде"
 
-#: templates/home.html:70
-msgid "Alusta robootika õppimist juba täna"
-msgstr "Начни изучать роботехнику уже сегодня"
+#: templates/home.html:172
+msgid "Viimased uudised"
+msgstr "Последние новости"
 
-#: templates/home.html:74
-msgid "Registreeru kursusele"
-msgstr "Записаться на курс"
+#: templates/home.html:178
+msgid "Kõik uudised"
+msgstr "Все новости"
+
+#: templates/news_detail.html:15
+msgid "Tagasi uudiste juurde"
+msgstr "Назад к новостям"
+
+#: templates/news_list.html:17
+msgid "Värskeimad uudised ja teadaanded meie koolielust."
+msgstr "Свежие новости и объявления из жизни нашей школы."
+
+#: templates/news_list.html:55
+msgid "Hetkel pole ühtegi avaldatud uudist."
+msgstr "На данный момент нет опубликованных новостей."
+
+#~ msgid "Praktilised robootika kursused lastele ja noortele."
+#~ msgstr "Практические курсы робототехники для детей и подростков"
+
+#~ msgid "Registreeru"
+#~ msgstr "Записаться"
+
+#~ msgid "Scratch, Python ja robootika."
+#~ msgstr "Scratch, Python и робототехника"
+
+#~ msgid "Alusta robootika õppimist juba täna"
+#~ msgstr "Начни изучать роботехнику уже сегодня"
+
+#~ msgid "Registreeru kursusele"
+#~ msgstr "Записаться на курс"

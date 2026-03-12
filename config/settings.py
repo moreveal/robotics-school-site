@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 import os
 from pathlib import Path
-from django.conf.urls.i18n import i18n_patterns
 from .settings_env import Settings
 
 
@@ -34,6 +33,8 @@ DEBUG = env.DEBUG
 
 ALLOWED_HOSTS = env.ALLOWED_HOSTS
 
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
 
 # Application definition
 
@@ -46,20 +47,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # User apps
+    'ckeditor',
+    'ckeditor_uploader',
     'core',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
-
-    'core.middleware.LanguageRedirectMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -136,11 +137,14 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static & media files
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / "media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
