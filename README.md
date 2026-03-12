@@ -1,5 +1,11 @@
 ## Robotics School Site
 
+[![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Django](https://img.shields.io/badge/Django-5.2-092E20?logo=django&logoColor=white)](https://www.djangoproject.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Poetry](https://img.shields.io/badge/Poetry-deps-60A5FA?logo=python&logoColor=white)](https://python-poetry.org/)
+[![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+
 A single-page website for a robotics school built with Django, featuring multilingual support and Tailwind CSS.
 
 ### Main features
