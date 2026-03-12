@@ -18,6 +18,9 @@ npm-debug.log*
 # Compiled translations
 *.mo
 
+# Compiled styles
+static/css/style.css
+
 # OS junk
 .DS_Store
 Thumbs.db
